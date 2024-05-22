@@ -14,6 +14,12 @@ function getComputerChoice() {
     return computerSelection[randomIndex];
 }
 
+function playRound() {
+    
+    let humanScore = 0;
+    let computerScore = 0;
+    let humanSelection;
+    let computerSelection;
 
 
 

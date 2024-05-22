@@ -41,3 +41,25 @@ let result = playRound(humanSelection, computerSelection);
  
 let humanScore = 0;
 let computerScore = 0;
+
+// First round of the game
+if (result === "humanWon") {
+    humanScore++;
+    console.log(`result " human score: ${humanScore++} : ${computerScore}" `);
+} else if (result === "computerWon") {
+    computerScore++;
+    console.log(`result " computer score: ${computerScore++} : ${humanScore}"`);
+} else {
+    console.log("result: Tie!");
+    console.log(`human score: ${humanScore} , computer score: ${computerScore}`);
+}
+
+console.log(result);
+
+//Use Console
+
+
+
+
+
+

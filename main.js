@@ -28,3 +28,16 @@ function playRound(humanSelection, computerSelection) {
         console.log('you entered wrongly!');
     }
 }
+
+// Declared various variables
+
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
+
+let humanWinCount = ((`YOU (${humanSelection}) WIN, Computer (${computerSelection}) lost.`));
+let computerWinCount = ((`YOU (${humanSelection}) lost, Computer (${computerSelection}) won.`));
+
+let result = playRound(humanSelection, computerSelection);
+ 
+let humanScore = 0;
+let computerScore = 0;

@@ -43,6 +43,17 @@ function playRound() {
         console.log('you entered wrongly!');
     }
 }
+// A consdition to determine the winner after 5th round.
+if (humanScore === 5 ) {
+    console.log(`Game Over, You Won`);
+} else if (computerScore === 5) {
+    console.log(`Game Over, Computer Won`)
+} else {
+    console.log(`Game Over. TIE!`)
+}
+}
+
+playRound();
 
 
 

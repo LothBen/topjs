@@ -43,7 +43,7 @@ function playRound() {
         console.log('you entered wrongly!');
     }
 }
-// A consdition to determine the winner after 5th round.
+// A consdition to determine the winner who attained 5th score.
 if (humanScore === 5 ) {
     console.log(`Game Over, You Won`);
 } else if (computerScore === 5) {
@@ -56,7 +56,7 @@ if (humanScore === 5 ) {
 playRound();
 
 
-// This game comes to an end only when a player gets 5 scores
+// This game comes to an end only when a player gets 5 scores.
 
 
 

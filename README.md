@@ -6,7 +6,7 @@ DISCLAIMER: Please use browser console to play.
 Thank you.
 
 
-Script for 5 rounds
+Script for Until A Player hit 5 scores.
 
 DISCLAIMER: Please use browser console to play.
 Thank you.

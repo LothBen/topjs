@@ -56,6 +56,9 @@ if (humanScore === 5 ) {
 playRound();
 
 
+// This game comes to an end only when a player gets 5 scores
+
+
 
 
 

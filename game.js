@@ -49,9 +49,9 @@ function playRound() {
     }
 }
 // A consdition to determine the winner after 5th round.
-if (humanScore === 5 ) {
+if (humanScore > computerScore ) {
     console.log(`Game Over, You Won`);
-} else if (computerScore === 5) {
+} else if (computerScore > humanScore) {
     console.log(`Game Over, Computer Won`)
 } else {
     console.log(`Game Over. TIE!`)

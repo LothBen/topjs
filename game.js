@@ -21,29 +21,34 @@ function playRound() {
     let computerScore = 0;
     let humanSelection;
     let computerSelection;
+    let only5rounds = 0;  // the game will last for 5 rounds
 
-    while (humanScore < 5 && computerScore < 5) {
+    while (only5rounds < 5) {
+        
+        humanSelection = getHumanChoice();
+        computerSelection = getComputerChoice();
+        
         let humanWinCount = ((`YOU (${humanSelection}) WIN, Computer (${computerSelection}) lost.`));
         let computerWinCount = ((`YOU (${humanSelection}) lost, Computer (${computerSelection}) won.`));
 
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-
-    if (humanSelection === computerSelection) {
-        console.log(`YOU picked (${humanSelection}), and COMPUTER picked (${computerSelection}), IT'S A TIE!`);
-    } else if (humanSelection === 'rock' && (computerSelection === 'paper' || computerSelection === 'scissors') || (humanSelection === 'scissors' && computerSelection === 'paper')) {
-        console.log(humanWinCount);
-        humanScore++;
-        console.log(`Your score: ${humanScore}\nComputer score: ${computerScore}`);
-    } else if ((humanSelection === 'scissors' && computerSelection === 'rock') || (humanSelection === 'paper' && (computerSelection === 'scissors' || computerSelection === 'rock'))) {
-        console.log(computerWinCount);
-        computerScore++;
-        console.log(`Your score: ${humanScore}\nComputer score: ${computerScore}`);
-    } else {
-        console.log('you entered wrongly!');
+        if (humanSelection === computerSelection) {
+            console.log(`YOU picked (${humanSelection}), and COMPUTER picked (${computerSelection}), IT'S A TIE!`);
+            only5rounds++;
+        } else if (humanSelection === 'rock' && (computerSelection === 'paper' || computerSelection === 'scissors') || (humanSelection === 'scissors' && computerSelection === 'paper')) {
+            console.log(humanWinCount);
+            humanScore++;
+            console.log(`Your score: ${humanScore}\nComputer score: ${computerScore}`);
+            only5rounds++;
+        } else if ((humanSelection === 'scissors' && computerSelection === 'rock') || (humanSelection === 'paper' && (computerSelection === 'scissors' || computerSelection === 'rock'))) {
+            console.log(computerWinCount);
+            computerScore++;
+            console.log(`Your score: ${humanScore}\nComputer score: ${computerScore}`);
+            only5rounds++;
+        } else {
+            console.log('you entered wrongly!');
     }
 }
-// A consdition to determine the winner who attained 5th score.
+// A consdition to determine the winner after 5th round.
 if (humanScore === 5 ) {
     console.log(`Game Over, You Won`);
 } else if (computerScore === 5) {
